@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A206805_XuYouyang_CikguIzwan_Project2</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --bg: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: var(--bg); margin: 0; padding: 0; }
+        header { background: var(--primary); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background: var(--accent); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
+        section { background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1, h2, h3 { color: var(--primary); }
+        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-top: 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .lab-card, .project-card { border: 1px solid #eee; padding: 1.5rem; border-radius: 6px; background: #fafafa; }
+        .screenshot { width: 100%; max-width: 300px; display: block; margin: 10px auto; border: 1px solid #ddd; border-radius: 4px; }
+        a.btn { display: inline-block; background: var(--accent); color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; font-weight: bold; }
+        a.btn:hover { background: #2980b9; }
+        .tag { display: inline-block; background: #e0f7fa; color: #006064; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.85rem; margin: 0.2rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#labs">Lab Submissions</a>
+        <a href="#projects">Projects</a>
+        <a href="#reflection">Reflection</a>
+        <a href="#skills">Skills & Resources</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="profile">
+        <h2>1. Student Profile</h2>
+        <div class="grid-2">
+            <div>
+                <p><strong>Name:</strong> Xu Youyang</p>
+                <p><strong>Matric No.:</strong> A206805</p>
+                <p><strong>Programme:</strong> 2AKIT1</p>
+                <p><strong>Instructor:</strong> Cikgu Izwan</p>
+            </div>
+            <div>
+                <h3>Learning Goals</h3>
+                <p>To master modern Android development using Jetpack Compose and confidently build connected, persistent, and hardware-aware mobile applications.</p>
+                <h3>Chosen SDG</h3>
+                <p><strong>SDG 4: Quality Education</strong><br>
+                <em>Statement:</em> Empowering students through accessible classical literature tools and building a connected, global knowledge-sharing community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="labs">
+        <h2>2. Lab Submissions</h2>
+        
+        <div class="lab-card">
+            <h3>Lab 1: UI Implementation</h3>
+            <p><a href="https://youtu.be/FdXW3szs06k" class="btn" target="_blank">Watch Lab 1 on YouTube</a></p>
+            <img src="screenshots/lab1.png" alt="Lab 1 Screenshot - Basic UI" class="screenshot">
+            <p><strong>Reflection:</strong> Transitioning to Jetpack Compose was initially challenging, as thinking in terms of composable functions required a mental shift from traditional layout systems. Through this lab, I learned how to effectively use layout components such as Column, Row, and Box to structure the interface vertically, horizontally, and by stacking elements. This allowed me to successfully design a static, foundational UI for the application. For academic integrity, I completed the layout structure manually without AI assistance to fully understand how Compose layouts behave.</p>
+        </div>
+        <br>
+        
+        <div class="lab-card">
+            <h3>Lab 2: State & Interaction</h3>
+            <p><a href="https://youtu.be/ThG0BcfUjW0" class="btn" target="_blank">Watch Lab 2 on YouTube</a></p>
+            <img src="screenshots/lab2.png" alt="Lab 2 Screenshot - Interaction" class="screenshot">
+            <p><strong>Reflection:</strong> Managing state was initially confusing, particularly understanding how variables trigger the UI to update. However, implementing TextField and Button components taught me how responsive components update dynamically based on user actions. I learned how to use `remember` and `mutableStateOf` to manage the state of user inputs, ensuring that when a user types, Compose knows it needs to recompose and update the screen. I authored the state logic independently to cement my understanding of these core interactions.</p>
+        </div>
+        <br>
+
+        <div class="lab-card">
+            <h3>Lab 3: Material Design 3</h3>
+            <p><a href="https://youtu.be/wgKDOaXv7fM" class="btn" target="_blank">Watch Lab 3 on YouTube</a></p>
+            <img src="screenshots/lab3.png" alt="Lab 3 Screenshot - Material Design" class="screenshot">
+            <p><strong>Reflection:</strong> Applying Material Design principles significantly improved the application by shifting it from a basic layout to a visually consistent and professional interface. I utilized the official Material 3 Theme Builder to generate an industry-standard, harmonious color palette. I successfully integrated these new color and theme files into the project, ensuring all UI components inherited the updated standards. By wrapping data lists and input forms inside Card composables, the user experience became much more polished.</p>
+        </div>
+        <br>
+
+        <div class="lab-card">
+            <h3>Lab 4: Navigation & ViewModel</h3>
+            <p><a href="https://youtu.be/CLQ-vHYNkP8" class="btn" target="_blank">Watch Lab 4 on YouTube</a></p>
+            <img src="screenshots/lab4.png" alt="Lab 4 Screenshot - Navigation" class="screenshot">
+            <p><strong>Reflection:</strong> Extending the application beyond a single screen context was a major technical milestone. I learned how to define clear routes and handle smooth, structured transitions between multiple screens using the NavController. Furthermore, integrating a ViewModel provided a crucial persistent data layer that safely stores and manages UI-related data even during configuration changes. Creating a data class to model information and linking it to the ViewModel solved previous issues where data would be lost during screen transitions.</p>
+        </div>
+        <br>
+
+        <div class="lab-card">
+            <h3>Lab 5: Room Database</h3>
+            <p><a href="https://youtu.be/gKzFnjZ6ASs" class="btn" target="_blank">Watch Lab 5 on YouTube</a></p>
+            <img src="screenshots/lab5.png" alt="Lab 5 Screenshot - Room DB" class="screenshot">
+            <p><strong>Reflection:</strong> Integrating the Room Database taught me the critical difference between temporary UI state managed by a ViewModel and true local data persistence. Building the architecture required understanding how the Entity acts as a database table, how the DAO executes operations, and how the Repository pattern sits between the ViewModel and the DAO. The most rewarding part was seeing data successfully stored in the Database Inspector and proving that it exists even after the application is completely closed and reopened.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>3. Project Submissions</h2>
+        
+        <div class="project-card">
+            <h3>Project 1: Basic Literature Assistant</h3>
+            <p><strong>Problem Statement:</strong> Students studying classical literature often lack an interactive, easy-to-navigate digital environment, leading to a disconnected and unengaging learning experience.</p>
+            <p><strong>Features:</strong> 5-screen navigation, basic UI/UX, static literature library presentation, shared state via ViewModel.</p>
+            <p><a href="https://youtu.be/hvWABqTPxRw" class="btn" target="_blank">Project 1 VSR (YouTube)</a> &nbsp; <a href="#" class="btn" style="background:#333;" target="_blank">GitHub Repository</a></p>
+            <p><strong>Lessons Learned:</strong> Building this complete 5-screen application reinforced the necessity of centralized state management. The most important lesson was ensuring that the ViewModel successfully shares dynamic data across different screens. I learned how to architect the application so that a user could add an item on a form input screen and immediately see that data accurately displayed on a separate summary list screen.</p>
+        </div>
+        <br>
+
+        <div class="project-card">
+            <h3>Project 2: Connected Global Learning Assistant</h3>
+            <p><strong>Problem Statement:</strong> While Project 1 provided static learning, real education requires inspiration, data persistence, and global community sharing to fully address SDG 4 (Quality Education).</p>
+            <p><strong>Technical Pillars Implemented:</strong></p>
+            <ul>
+                <li><strong>Local Persistence (Room):</strong> Users can write and save classical quotes locally for offline review.</li>
+                <li><strong>Web API (Retrofit):</strong> Fetches live inspirational quotes dynamically from public APIs.</li>
+                <li><strong>Hardware Sensor (Accelerometer):</strong> Users can "shake" their phone to trigger the API call, making discovering new knowledge physically interactive.</li>
+                <li><strong>Cloud Integration (Firebase Firestore):</strong> Users can push their local study notes to a real-time global community board, synchronizing data across all instances of the app.</li>
+            </ul>
+            <p><a href="https://youtu.be/4FxR0PrFhHQ" class="btn" target="_blank">Project 2 VSR (YouTube)</a> &nbsp; <a href="#" class="btn" style="background:#333;" target="_blank">GitHub Repository</a></p>
+        </div>
+    </section>
+
+    <section id="reflection">
+        <h2>4. Reflection & Learning Journey</h2>
+        <p><strong>Growth & Challenges:</strong> My growth from building basic static layouts in Lab 1 to engineering a fully connected application in Project 2 has been immense. The most significant challenge was successfully implementing and orchestrating the four technical pillars simultaneously. It required careful thread management (Dispatchers.IO) to connect to a free public REST API via Retrofit to fetch dynamic data, trigger that request using a mobile hardware accelerometer sensor, persist the fetched data locally using a Room Database, and push community data remotely to Firebase Firestore without blocking the main UI thread.</p>
+        <p><strong>SDG Impact:</strong> This application directly addresses my chosen Sustainable Development Goal (Quality Education) by moving beyond static information to create a fully connected learning environment. By utilizing cloud integration to backup and share data remotely, and local persistence for offline accessibility, the application provides a persistent, interactive tool that practically supports the SDG's objectives through real-time global community engagement.</p>
+    </section>
+
+    <section id="skills">
+        <h2>5. Skills & Tech Stack</h2>
+        <div>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">Jetpack Navigation</span>
+            <span class="tag">Room Database (SQLite)</span>
+            <span class="tag">Retrofit & Gson (REST APIs)</span>
+            <span class="tag">Firebase Firestore (NoSQL)</span>
+            <span class="tag">Android Hardware Sensors</span>
+            <span class="tag">Coroutines & StateFlow</span>
+        </div>
+        
+        <h2 style="margin-top: 2rem;">6. Resources & References</h2>
+        <ul>
+            <li><strong>API:</strong> Quotable REST API (api.quotable.io) for fetching daily quotes.</li>
+            <li><strong>Documentation:</strong> Official Android Developer documentation for SensorManager, Room, Retrofit, and Compose.</li>
+            <li><strong>Cloud Service:</strong> Firebase Documentation for Firestore setup and real-time snapshot listeners.</li>
+            <li><strong>AI Assistance Acknowledgement:</strong> Used AI (Gemini) strictly to help troubleshoot Gradle dependency conflicts, format HTML for this e-Portfolio, and to assist with the calculation logic for the Accelerometer shake detection threshold. UI layout, state logic, and architectural design were implemented manually to ensure deep comprehension.</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
